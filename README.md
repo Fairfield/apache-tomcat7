@@ -9,7 +9,7 @@ mkdir /opt/build
 
 sudo yum -y install rpmdevtools && rpmdev-setuptree
 
-wget https://raw.github.comcflynn5/apache-tomcat7/master/tomcat7.spec -O /opt/build/tomcat7.spec
+wget https://raw.github.com/cflynn5/apache-tomcat7/master/tomcat7.spec -O /opt/build/tomcat7.spec
 
 wget https://raw.github.com/cflynn5/apache-tomcat7/master/tomcat7.init -O /opt/build/opt/build
 
