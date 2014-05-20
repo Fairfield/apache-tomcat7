@@ -1,26 +1,26 @@
-# To Build:
-#
-# sudo yum -y install rpmdevtools && rpmdev-setuptree
-#
-# wget https://raw.github.com/nmilford/rpm-tomcat7/master/tomcat7.spec -O ~/rpmbuild/SPECS/tomcat7.spec
-# wget https://raw.github.com/nmilford/rpm-tomcat7/master/tomcat7.init -O ~/rpmbuild/SOURCES/tomcat7.init
-# wget https://raw.github.com/nmilford/rpm-tomcat7/master/tomcat7.sysconfig -O ~/rpmbuild/SOURCES/tomcat7.sysconfig
-# wget https://raw.github.com/nmilford/rpm-tomcat7/master/tomcat7.logrotate -O ~/rpmbuild/SOURCES/tomcat7.logrotate
-# wget http://www.motorlogy.com/apache/tomcat/tomcat-7/v7.0.41/bin/apache-tomcat-7.0.41.tar.gz -O ~/rpmbuild/SOURCES/apache-tomcat-7.0.41.tar.gz
-# rpmbuild -bb ~/rpmbuild/SPECS/tomcat7.spec
+#To Build:
+
+#mkdir /opt/build
+#sudo yum -y install rpmdevtools && rpmdev-setuptree
+#wget https://raw.github.com/cflynn5/apache-tomcat7/master/tomcat7.spec -O /opt/build/tomcat7.spec
+#wget https://raw.github.com/cflynn5/apache-tomcat7/master/tomcat7.init -O /opt/build/opt/build
+#wget https://raw.github.com/cflynn5/apache-tomcat7/master/tomcat7.sysconfig -O /opt/build/tomcat7.sysconfig
+#wget https://raw.github.com/cflynn5/apache-tomcat7/master/tomcat7.logrotate -O /opt/build/tomcat7.logrotate
+#wget http://apache.claz.org/tomcat/tomcat-7/v7.0.53/bin/apache-tomcat-7.0.53.tar.gz -O /opt/build/apache-tomcat-7.0.53.tar.gz
+#rpmbuild -bb /opt/build/tomcat7.spec
 
 %define __jar_repack %{nil}
-%define tomcat_home /opt/tomcat7
+%define tomcat_home /opt/apache-tomcat
 %define tomcat_group tomcat
 %define tomcat_user tomcat
 
 Summary:    Apache Servlet/JSP Engine, RI for Servlet 2.4/JSP 2.0 API
 Name:       tomcat7
-Version:    7.0.41
+Version:    7.0.53
 BuildArch:  noarch
 Release:    1
 License:    Apache Software License
-Group:      Networking/Daemons
+Group:      tomcat
 URL:        http://tomcat.apache.org/
 Source0:    apache-tomcat-%{version}.tar.gz
 Source1:    %{name}.init
@@ -111,5 +111,5 @@ if [ $1 -ge 1 ]; then
 fi
 
 %changelog
-* Mon Jul 1 2013 Nathan Milford <nathan@milford.io>
-- 7.0.41
+* Mon May 20 2014
+- 7.0.53
