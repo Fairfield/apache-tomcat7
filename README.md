@@ -17,6 +17,6 @@ wget https://raw.github.com/cflynn5/apache-tomcat7/master/tomcat7.sysconfig -O /
 
 wget https://raw.github.com/cflynn5/apache-tomcat7/master/tomcat7.logrotate -O /opt/build/tomcat7.logrotate
 
-wget http://apache.claz.org/tomcat/tomcat-7/v7.0.53/bin/apache-tomcat-7.0.53.tar.gz -O ~/opt/build/apache-tomcat-7.0.53.tar.gz
+wget http://apache.claz.org/tomcat/tomcat-7/v7.0.53/bin/apache-tomcat-7.0.53.tar.gz -O /opt/build/apache-tomcat-7.0.53.tar.gz
 
 rpmbuild -bb /opt/build/tomcat7.spec
