@@ -6,7 +6,7 @@
 #wget https://raw.github.com/cflynn5/apache-tomcat7/master/tomcat7.init -O /opt/build/opt/build
 #wget https://raw.github.com/cflynn5/apache-tomcat7/master/tomcat7.sysconfig -O /opt/build/tomcat7.sysconfig
 #wget https://raw.github.com/cflynn5/apache-tomcat7/master/tomcat7.logrotate -O /opt/build/tomcat7.logrotate
-#wget http://apache.claz.org/tomcat/tomcat-7/v7.0.53/bin/apache-tomcat-7.0.53.tar.gz -O /opt/build/apache-tomcat-7.0.53.tar.gz
+#wget http://apache.claz.org/tomcat/tomcat-7/v7.0.54/bin/apache-tomcat-7.0.54.tar.gz -O /opt/build/apache-tomcat-7.0.54.tar.gz
 #rpmbuild -bb /opt/build/tomcat7.spec
 
 %define __jar_repack %{nil}
@@ -16,7 +16,7 @@
 
 Summary:    Apache Servlet/JSP Engine, RI for Servlet 2.4/JSP 2.0 API
 Name:       tomcat7
-Version:    7.0.53
+Version:    7.0.54
 BuildArch:  noarch
 Release:    1
 License:    Apache Software License
